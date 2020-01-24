@@ -5,20 +5,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>A project coming soon</h2>
+      <img src="C:\Users\wintr\Desktop\React\adam\src\images\PHI.png" alt="A phillies banner" height='42' width='42'></img>
     </div>
   );
 }
