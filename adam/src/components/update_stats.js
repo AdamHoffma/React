@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-const UpdateStats = () => {
+const UpdateStats = (props) => {
     const [roxie, setRoxie] = useState({Avg: "", OBP: "", SLG: "", Hits: "", ABs: "", Doubles: "", Triples: "", HRs: "", Rs: "", RBIs: "", SBs: "", Walks: ""})
     const [maggie, setMaggie] = useState({Avg: "", OBP: "", SLG: "", Hits: "", ABs: "", Doubles: "", Triples: "", HRs: "", Rs: "", RBIs: "", SBs: "", Walks: ""})
     const [annika, setAnnika] = useState({Avg: "", OBP: "", SLG: "", Hits: "", ABs: "", Doubles: "", Triples: "", HRs: "", Rs: "", RBIs: "", SBs: "", Walks: ""})
@@ -68,16 +68,13 @@ const UpdateStats = () => {
         setSierra({...sierra, [e.target.name]: e.target.value})
     }
 
-    console.log('roxie', roxie)
-    console.log('maggie', maggie)    
-      
-      
-        
-       
-        
-    
-    
-    
+    const Submit = e => {
+        e.preventDefault()
+        setRoxie({...roxie})
+    }
+
+    console.log("props", props)
+     
     
     return (
         <div>      
@@ -93,7 +90,7 @@ const UpdateStats = () => {
                 <input type="text" name="Rs" value={roxie.Rs} onChange={addRoxie} placeholder="Rs"></input>
                 <input type="text" name="RBIs" value={roxie.RBIs} onChange={addRoxie} placeholder="RBIs"></input>
                 <input type="text" name="SBs" value={roxie.SBs} onChange={addRoxie} placeholder="SBs"></input>
-                <button>Submit</button>                        
+                <button onClick={Submit}>Submit</button>                        
             </form>
             </div>
             <div>
